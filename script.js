@@ -52,6 +52,17 @@ let matematik = {
         teacher.subjects = teacher.subjects.filter ((s) => {
             return s !== this;
         });
+    }, 
+    gradeStudent: function(student, grade){
+    
+        let thisGrade = {
+            Course: this.name,
+            Teacher: this.teacher.name,
+            Grade: grade,
+            Student: student.name
+        }
+        student.grades.push(thisGrade);
+        return thisGrade;
     }
 }
 
@@ -74,6 +85,17 @@ let webbproduktion = {
         teacher.subjects = teacher.subjects.filter ((s) => {
             return s !== this;
         });
+    },
+    gradeStudent: function(student, grade){
+    
+        let thisGrade = {
+            Course: this.name,
+            Teacher: this.teacher.name,
+            Grade: grade,
+            Student: student.name
+        }
+        student.grades.push(thisGrade);
+        return thisGrade;
     }
 }
 
@@ -96,6 +118,17 @@ let javascript = {
         teacher.subjects = teacher.subjects.filter ((s) => {
             return s !== this;
         });
+    }, 
+    gradeStudent: function(student, grade){
+    
+        let thisGrade = {
+            Course: this.name,
+            Teacher: this.teacher.name,
+            Grade: grade,
+            Student: student.name
+        }
+        student.grades.push(thisGrade);
+        return thisGrade;
     }
 }
 
@@ -106,6 +139,7 @@ let my = {
     school: {},
     age: 26,
     gender: "female",
+    grades: [],
     subjects: [],
     enlistToSubject: function (subject){
         this.subjects.push(subject);
@@ -128,6 +162,7 @@ let anton = {
     school: {},
     age: 25,
     gender: "male",
+    grades: [],
     subjects: [],
     enlistToSubject: function (subject){
         this.subjects.push(subject);
@@ -146,6 +181,7 @@ let lina = {
     school: {},
     age: 29,
     gender: "female",
+    grades: [],
     subjects: [],
     enlistToSubject: function (subject){
         this.subjects.push(subject);
@@ -164,6 +200,7 @@ let august = {
     school: {},
     age: 22,
     gender: "male",
+    grades: [],
     subjects: [],
     enlistToSubject: function (subject){
         this.subjects.push(subject);
@@ -182,6 +219,7 @@ let harley = {
     school: {},
     age: 24,
     gender: "male",
+    grades: [],
     subjects: [],
     enlistToSubject: function (subject){
         this.subjects.push(subject);
@@ -272,6 +310,8 @@ function displayAllTeachers () {
      arrayOfStudentEnlistedToCouse = thisArrayOfStudentEnlistedToCouse;
      return arrayOfStudentEnlistedToCouse;
  }
+
+
 
 
 // ----------
